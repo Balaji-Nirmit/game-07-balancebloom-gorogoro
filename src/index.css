@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=DM+Serif+Display:ital@0;1&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 36 33% 96%;
+    --foreground: 28 15% 18%;
+
+    --card: 36 30% 93%;
+    --card-foreground: 28 15% 18%;
+
+    --popover: 36 33% 96%;
+    --popover-foreground: 28 15% 18%;
+
+    --primary: 16 50% 52%;
+    --primary-foreground: 36 33% 96%;
+
+    --secondary: 36 25% 88%;
+    --secondary-foreground: 28 15% 18%;
+
+    --muted: 36 20% 90%;
+    --muted-foreground: 28 10% 50%;
+
+    --accent: 36 30% 85%;
+    --accent-foreground: 28 15% 18%;
+
+    --destructive: 0 65% 55%;
+    --destructive-foreground: 36 33% 96%;
+
+    --border: 30 20% 85%;
+    --input: 30 20% 85%;
+    --ring: 16 50% 52%;
+
+    --radius: 1rem;
+
+    /* Game-specific tokens */
+    --game-bg: 36 33% 96%;
+    --game-surface: 36 30% 93%;
+    --game-surface-elevated: 36 35% 97%;
+    --game-beam: 28 20% 45%;
+    --game-pivot: 16 50% 52%;
+    --game-object-1: 16 50% 52%;
+    --game-object-2: 28 35% 60%;
+    --game-object-3: 40 40% 65%;
+    --game-object-4: 20 45% 48%;
+    --game-object-5: 32 30% 55%;
+    --game-success: 145 40% 45%;
+    --game-warning: 35 80% 55%;
+    --game-shadow: 28 15% 18%;
+    --game-text-hero: 28 15% 18%;
+    --game-text-sub: 28 10% 45%;
+    --game-star-filled: 40 85% 55%;
+    --game-star-empty: 30 15% 80%;
+    --game-overlay: 28 15% 18%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow: hidden;
+    touch-action: manipulation;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: 'DM Serif Display', serif;
+  }
+
+  .game-shadow-sm {
+    box-shadow: 0 2px 8px -2px hsl(var(--game-shadow) / 0.08);
+  }
+
+  .game-shadow-md {
+    box-shadow: 0 4px 16px -4px hsl(var(--game-shadow) / 0.12);
+  }
+
+  .game-shadow-lg {
+    box-shadow: 0 8px 32px -8px hsl(var(--game-shadow) / 0.16);
+  }
+
+  .game-shadow-xl {
+    box-shadow: 0 16px 48px -12px hsl(var(--game-shadow) / 0.2);
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+}
